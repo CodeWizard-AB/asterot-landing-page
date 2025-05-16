@@ -160,29 +160,17 @@ export default function HeroSection() {
 								}}
 								className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
 							>
-								<div
-									key={1}
-									className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5"
-								>
-									<Button
-										asChild
-										size="lg"
-										className="rounded-xl px-5 text-base"
-									>
-										<Link href="#link">
-											<span className="text-nowrap">Register Today</span>
-										</Link>
-									</Button>
-								</div>
-								<Button
-									key={2}
-									asChild
-									size="lg"
-									variant="ghost"
-									className="h-10.5 rounded-xl px-5"
-								>
+								<Button asChild size="lg" className="text-base" key={1}>
 									<Link href="#link">
-										<span className="text-nowrap">Request a demo</span>
+										<span className="text-nowrap">Register Today</span>
+									</Link>
+								</Button>
+
+								<Button key={2} asChild size="lg" variant="outline">
+									<Link href="#link">
+										<span className="text-nowrap">
+											View Rules and Regulation
+										</span>
 									</Link>
 								</Button>
 							</AnimatedGroup>
@@ -208,18 +196,13 @@ export default function HeroSection() {
 								className="bg-linear-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
 							/>
 							<div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl shadow-lg shadow-zinc-950/15 ring-1">
-								<video
-									autoPlay={true}
-									preload="none"
-									className="w-full"
-									controls
-									loop
-								>
-									<source
-										src="https://drive.google.com/file/d/1vVTtG3OuPr9yJU6FkiP0blk0dARMDS4R/view?usp=sharing"
-										type="video/mp4"
-									/>
-								</video>
+								<iframe
+									src="https://drive.google.com/file/d/1vVTtG3OuPr9yJU6FkiP0blk0dARMDS4R/preview"
+									width="100%"
+									height="100%"
+									allow="autoplay"
+									allowFullScreen
+								></iframe>
 							</div>
 						</div>
 					</AnimatedGroup>
