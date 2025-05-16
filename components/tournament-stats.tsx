@@ -12,7 +12,7 @@ export default function TournamentStats() {
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
 			{TOURNAMENT_STATS.map((stat, index) => (
-				<Card key={index} className="border-chart-5/40">
+				<Card key={index} className="border-chart-5/30">
 					<CardContent>
 						<div className="flex items-center gap-4">
 							<div className="bg-chart-5/10 p-3 rounded-lg">

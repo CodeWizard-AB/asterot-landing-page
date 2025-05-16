@@ -1,5 +1,7 @@
 "use client";
 
+import BkashLogo from "@/assets/BKash-Logo.svg";
+import NagadLogo from "@/assets/Nagad-Logo.svg";
 import { useState } from "react";
 import { SectionHeading } from "@/components/section-heading";
 import {
@@ -11,14 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
-	AlertTriangle,
-	CreditCard,
-	CheckCircle2,
-	Users,
-	FileText,
-	Upload,
-} from "lucide-react";
+import { AlertTriangle, CreditCard, Users, Upload } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -35,6 +30,8 @@ import {
 } from "@/components/ui/form";
 import { toast } from "sonner";
 import TournamentStats from "@/components/tournament-stats";
+import RegistrationTimeline from "@/components/registration-timeline";
+import Image from "next/image";
 
 const formSchema = z.object({
 	teamName: z
@@ -54,9 +51,6 @@ const formSchema = z.object({
 export function RegistrationSection() {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [paymentReceipt, setPaymentReceipt] = useState<File | null>(null);
-	const [registeredTeams, setRegisteredTeams] = useState(12); // Example state for registered teams
-	const totalSlots = 24;
-	const remainingSlots = totalSlots - registeredTeams;
 
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
@@ -103,7 +97,6 @@ export function RegistrationSection() {
 			form.reset();
 			setPaymentReceipt(null);
 			setIsSubmitting(false);
-			setRegisteredTeams((prev) => prev + 1);
 		}, 1500);
 	}
 
@@ -121,37 +114,8 @@ export function RegistrationSection() {
 				{/* Tournament Stats */}
 				<TournamentStats />
 
-				{/* Registration Progress */}
-				<Card className="mb-8">
-					<CardContent className="pt-6">
-						<div className="flex flex-col md:flex-row items-center justify-between gap-4">
-							<div className="flex items-center gap-4">
-								<div className="bg-chart-5/10 p-3 rounded-lg">
-									<Users className="h-6 w-6 text-chart-5" />
-								</div>
-								<div>
-									<h3 className="font-bold text-lg">Registration Progress</h3>
-									<p className="text-muted-foreground">
-										Teams registered: {registeredTeams} out of {totalSlots}
-									</p>
-								</div>
-							</div>
-							<div className="flex items-center gap-2">
-								<div className="bg-muted rounded-full h-4 w-48">
-									<div
-										className="bg-chart-5 h-full rounded-full transition-all duration-500"
-										style={{
-											width: `${(registeredTeams / totalSlots) * 100}%`,
-										}}
-									/>
-								</div>
-								<span className="text-sm font-medium">
-									{remainingSlots} slots left
-								</span>
-							</div>
-						</div>
-					</CardContent>
-				</Card>
+				{/* Registration Timeline */}
+				<RegistrationTimeline />
 
 				<div className="grid lg:grid-cols-3 gap-8">
 					<div className="lg:col-span-2">
@@ -287,42 +251,6 @@ export function RegistrationSection() {
 											)}
 										/>
 
-										<div className="grid md:grid-cols-2 gap-6">
-											<FormField
-												control={form.control}
-												name="transactionId"
-												render={({ field }) => (
-													<FormItem>
-														<FormLabel>Transaction ID</FormLabel>
-														<FormControl>
-															<Input
-																placeholder="Enter transaction ID"
-																{...field}
-															/>
-														</FormControl>
-														<FormMessage />
-													</FormItem>
-												)}
-											/>
-
-											<FormField
-												control={form.control}
-												name="senderNumber"
-												render={({ field }) => (
-													<FormItem>
-														<FormLabel>Sender&apos;s Number</FormLabel>
-														<FormControl>
-															<Input
-																placeholder="Enter sender's number"
-																{...field}
-															/>
-														</FormControl>
-														<FormMessage />
-													</FormItem>
-												)}
-											/>
-										</div>
-
 										<div className="space-y-4">
 											<Label>Upload Payment Receipt</Label>
 											<div className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary/50 transition-colors">
@@ -367,62 +295,32 @@ export function RegistrationSection() {
 					</div>
 
 					<div className="space-y-6">
-						<Alert
-							variant="default"
-							className="border-chart-5/40 bg-chart-5/10"
-						>
-							<CheckCircle2 className="h-4 w-4 text-chart-5" />
-							<AlertTitle>Registration Status</AlertTitle>
-							<AlertDescription className="mt-2">
-								<div className="space-y-2">
-									<div className="flex justify-between items-center">
-										<span>Available Slots:</span>
-										<span className="font-medium">
-											{remainingSlots} out of {totalSlots}
-										</span>
-									</div>
-									<div className="flex justify-between items-center">
-										<span>Teams Registered:</span>
-										<span className="font-medium">{registeredTeams}</span>
-									</div>
-								</div>
-							</AlertDescription>
-						</Alert>
-
 						<Card>
 							<CardHeader>
 								<div className="flex items-center gap-2">
 									<CreditCard className="h-5 w-5 text-chart-5" />
 									<CardTitle>Payment Information</CardTitle>
 								</div>
-								<CardDescription>Registration fee: ৳10,000</CardDescription>
+								<CardDescription>Registration fee: ৳6,000</CardDescription>
 							</CardHeader>
 							<CardContent className="space-y-6">
 								<div className="space-y-4">
 									<div className="space-y-2">
 										<h4 className="font-medium flex items-center gap-2">
-											<img
-												src="/bkash-logo.png"
-												alt="bKash"
-												className="h-6 w-6"
-											/>
+											<Image src={BkashLogo} alt="bKash" className="w-20" />
 											bKash Payment
 										</h4>
 										<div className="text-sm grid grid-cols-2 gap-x-4 gap-y-1">
 											<span className="text-muted-foreground">Number:</span>
 											<span className="font-medium">01712345678</span>
 											<span className="text-muted-foreground">Type:</span>
-											<span>Merchant</span>
+											<span>Personal</span>
 										</div>
 									</div>
 
 									<div className="space-y-2">
 										<h4 className="font-medium flex items-center gap-2">
-											<img
-												src="/nagad-logo.png"
-												alt="Nagad"
-												className="h-6 w-6"
-											/>
+											<Image src={NagadLogo} alt="nagad" className="w-20" />
 											Nagad Payment
 										</h4>
 										<div className="text-sm grid grid-cols-2 gap-x-4 gap-y-1">
@@ -446,35 +344,6 @@ export function RegistrationSection() {
 										<li>Save screenshot/receipt</li>
 									</ol>
 								</div>
-							</CardContent>
-						</Card>
-
-						<Card>
-							<CardHeader>
-								<div className="flex items-center gap-2">
-									<FileText className="h-5 w-5 text-chart-5" />
-									<CardTitle>Required Documents</CardTitle>
-								</div>
-							</CardHeader>
-							<CardContent>
-								<ul className="space-y-2 text-sm">
-									<li className="flex items-center gap-2">
-										<CheckCircle2 className="h-4 w-4 text-chart-5" />
-										University ID cards for all players
-									</li>
-									<li className="flex items-center gap-2">
-										<CheckCircle2 className="h-4 w-4 text-chart-5" />
-										Medical fitness certificates
-									</li>
-									<li className="flex items-center gap-2">
-										<CheckCircle2 className="h-4 w-4 text-chart-5" />
-										NOC from university
-									</li>
-									<li className="flex items-center gap-2">
-										<CheckCircle2 className="h-4 w-4 text-chart-5" />
-										Payment confirmation receipt
-									</li>
-								</ul>
 							</CardContent>
 						</Card>
 

@@ -137,15 +137,6 @@ export default function HeroSection() {
 								</div>
 							</AnimatedGroup>
 
-							<AnimatedGroup variants={transitionVariants}>
-								<div className="mb-10 p-6 backdrop-blur-md rounded-xl border border-white/10 shadow-lg max-w-2xl mx-auto">
-									<p className="text-white font-medium mb-5 text-lg">
-										Registration Closes In
-									</p>
-									<Countdown targetDate={targetDate} className="text-white" />
-								</div>
-							</AnimatedGroup>
-
 							<AnimatedGroup
 								variants={{
 									container: {
@@ -202,6 +193,7 @@ export default function HeroSection() {
 									height="100%"
 									allow="autoplay"
 									allowFullScreen
+									// className="w-full h-full border-none rounded-md"
 								></iframe>
 							</div>
 						</div>
