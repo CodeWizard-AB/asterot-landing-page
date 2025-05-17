@@ -2,10 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Trophy, Medal, Target } from "lucide-react";
 
 const TOURNAMENT_STATS = [
-	{ icon: Trophy, label: "Total Prize Pool", value: "৳3,50,000" },
-	{ icon: Medal, label: "Champions Prize", value: "৳2,00,000" },
-	{ icon: Medal, label: "Runners-up Prize", value: "৳1,00,000" },
-	{ icon: Target, label: "Semi-finalists", value: "৳25,000 each" },
+	{ icon: Trophy, label: "Total Prize Pool", value: "৳  3,50,000" },
+	{ icon: Medal, label: "Champions Prize", value: "৳  2,00,000" },
+	{ icon: Medal, label: "Runners-up Prize", value: "৳  1,00,000" },
+	{ icon: Target, label: "Semi-finalists", value: "৳  25,000 each" },
 ];
 
 export default function TournamentStats() {
@@ -19,7 +19,9 @@ export default function TournamentStats() {
 								<stat.icon className="h-6 w-6 text-chart-5" />
 							</div>
 							<div>
-								<p className="text-sm text-left text-muted-foreground">{stat.label}</p>
+								<p className="text-sm text-left text-muted-foreground">
+									{stat.label}
+								</p>
 								<p className="text-2xl font-bold">{stat.value}</p>
 							</div>
 						</div>

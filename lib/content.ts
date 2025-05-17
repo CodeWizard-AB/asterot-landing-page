@@ -1,9 +1,10 @@
 export const menuItems = [
-	{ name: "About", href: "#link" },
-	{ name: "Tournament", href: "#link" },
-	{ name: "Registration", href: "#link" },
-	{ name: "Testimonials", href: "#link" },
-	{ name: "Contact", href: "#link" },
+	{ name: "About", href: "#about" },
+	{ name: "Tournament", href: "#tournament" },
+	{ name: "Registration", href: "#registration" },
+	{ name: "Team", href: "#team" },
+	{ name: "Testimonials", href: "#testimonials" },
+	{ name: "Contact", href: "#contact" },
 ];
 
 export const testimonials = [

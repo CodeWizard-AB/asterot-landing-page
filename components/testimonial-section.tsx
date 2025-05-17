@@ -7,7 +7,10 @@ import React from "react";
 
 export default function TestimonialSection() {
 	return (
-		<div className="min-h-screen flex justify-center items-center py-12 px-6">
+		<section
+			id="#testimonials"
+			className="min-h-screen flex justify-center items-center py-12 px-6"
+		>
 			<div>
 				<div className="text-center max-w-xl mx-auto mb-16">
 					<h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
@@ -50,6 +53,6 @@ export default function TestimonialSection() {
 					))}
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

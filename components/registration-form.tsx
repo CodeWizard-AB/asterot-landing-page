@@ -18,24 +18,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-
-const formSchema = z.object({
-	teamName: z
-		.string()
-		.min(3, { message: "Team name must be at least 3 characters." }),
-	institution: z.string().min(3, { message: "Institution name is required." }),
-	coachName: z.string().min(3, { message: "Coach/Manager name is required." }),
-	email: z.string().email({ message: "Please enter a valid email address." }),
-	phone: z.string().min(11, { message: "Please enter a valid phone number." }),
-	paymentMethod: z.enum(["bkash", "nagad"], {
-		required_error: "Please select a payment method.",
-	}),
-	transactionId: z.string().min(6, { message: "Transaction ID is required." }),
-	senderNumber: z.string().min(11, { message: "Sender's number is required." }),
-});
+import { formSchema } from "@/lib/zod";
 
 export function RegistrationForm() {
-	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [paymentReceipt, setPaymentReceipt] = useState<File | null>(null);
 
 	const form = useForm<z.infer<typeof formSchema>>({
@@ -43,12 +28,16 @@ export function RegistrationForm() {
 		defaultValues: {
 			teamName: "",
 			institution: "",
-			coachName: "",
+			managerName: "",
 			email: "",
 			phone: "",
 			paymentMethod: "bkash",
 		},
 	});
+
+	const {
+		formState: { isSubmitting },
+	} = form;
 
 	const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (e.target.files && e.target.files[0]) {
@@ -72,18 +61,15 @@ export function RegistrationForm() {
 			return;
 		}
 
-		setIsSubmitting(true);
-
 		// Log the form values for debugging
 		console.log("Form values:", values);
 
 		setTimeout(() => {
 			toast.success("Registration submitted successfully!", {
-				description: "We'll review your application and contact you soon.",
+				description: "We'll review your registration and contact you soon.",
 			});
 			form.reset();
 			setPaymentReceipt(null);
-			setIsSubmitting(false);
 		}, 1500);
 	}
 
@@ -123,7 +109,7 @@ export function RegistrationForm() {
 				<div className="grid md:grid-cols-2 gap-6">
 					<FormField
 						control={form.control}
-						name="coachName"
+						name="managerName"
 						render={({ field }) => (
 							<FormItem>
 								<FormLabel>Coach/Manager Name</FormLabel>

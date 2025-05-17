@@ -53,7 +53,7 @@ const teamMembers = [
 
 export default function TeamSection() {
 	return (
-		<div className="flex flex-col items-center justify-center py-14 px-4 sm:px-6 lg:px-8">
+		<section id='#team' className="flex flex-col items-center justify-center py-14 px-4 sm:px-6 lg:px-8">
 			<div className="text-center max-w-xl mx-auto">
 				<h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
 					Meet Our Team
@@ -80,6 +80,6 @@ export default function TeamSection() {
 					</div>
 				))}
 			</div>
-		</div>
+		</section>
 	);
 }

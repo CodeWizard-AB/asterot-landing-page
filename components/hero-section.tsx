@@ -29,22 +29,22 @@ const PRIZE_INFO = [
 	{
 		icon: Trophy,
 		label: "Champions",
-		value: "৳2,00,000",
+		value: "৳  2,00,000",
 	},
 	{
 		icon: Medal,
 		label: "Runners-up",
-		value: "৳1,00,000",
+		value: "৳  1,00,000",
 	},
 	{
 		icon: Target,
 		label: "Semi-finalists",
-		value: "৳25,000 each",
+		value: "৳  25,000 each",
 	},
 	{
 		icon: Users,
 		label: "Teams",
-		value: "12 Universities",
+		value: "16 Universities",
 	},
 ];
 
@@ -58,54 +58,25 @@ export default function HeroSection() {
 				aria-hidden
 				className="absolute inset-0 isolate hidden opacity-65 contain-strict lg:block"
 			>
-				<div className="w-140 h-320 -translate-y-87.5 absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]" />
-				<div className="h-320 absolute left-0 top-0 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
-				<div className="h-320 -translate-y-87.5 absolute left-0 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
+				{/* Left side lighting effects */}
+				<div className="w-140 h-320 -translate-y-87.5 absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,95%,.1)_0,hsla(0,0%,75%,.05)_50%,hsla(0,0%,45%,0)_80%)] animate-pulse-slow transition-all duration-1000" />
+				<div className="h-320 absolute left-0 top-0 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,95%,.08)_0,hsla(0,0%,65%,.03)_80%,transparent_100%)] [translate:5%_-50%] animate-pulse-slower transition-all duration-1000" />
+				<div className="h-320 -translate-y-87.5 absolute left-0 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,95%,.06)_0,hsla(0,0%,65%,.02)_80%,transparent_100%)] animate-pulse-slowest transition-all duration-1000" />
+
+				{/* Right side lighting effects */}
+				<div className="w-140 h-320 -translate-y-87.5 absolute right-0 top-0 rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,95%,.1)_0,hsla(0,0%,75%,.05)_50%,hsla(0,0%,45%,0)_80%)] animate-pulse-slow transition-all duration-1000" />
+				<div className="h-320 absolute right-0 top-0 w-60 rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,95%,.08)_0,hsla(0,0%,65%,.03)_80%,transparent_100%)] [translate:-5%_-50%] animate-pulse-slower transition-all duration-1000" />
+				<div className="h-320 -translate-y-87.5 absolute right-0 top-0 w-60 rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,95%,.06)_0,hsla(0,0%,65%,.02)_80%,transparent_100%)] animate-pulse-slowest transition-all duration-1000" />
 			</div>
 			<div>
 				<div className="relative pt-24 md:pt-36">
-					{/* <AnimatedGroup
-						variants={{
-							container: {
-								visible: {
-									transition: {
-										delayChildren: 1,
-									},
-								},
-							},
-							item: {
-								hidden: {
-									opacity: 0,
-									y: 20,
-								},
-								visible: {
-									opacity: 1,
-									y: 0,
-									transition: {
-										type: "spring",
-										bounce: 0.3,
-										duration: 2,
-									},
-								},
-							},
-						}}
-						className="absolute inset-0 -z-20"
-					>
-						<Image
-							src="https://ik.imagekit.io/lrigu76hy/tailark/night-background.jpg?updatedAt=1745733451120"
-							alt="background"
-							className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
-							width="3276"
-							height="4095"
-						/>
-					</AnimatedGroup> */}
 					<div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"></div>
 					<div className="mx-auto max-w-screen-xl px-6">
 						<div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
 							<AnimatedGroup variants={transitionVariants}>
 								<div className="flex items-center justify-center mb-6">
 									<div className="px-4 py-1.5 rounded-full bg-primary/15 border border-primary/40 text-primary text-sm font-medium uppercase tracking-wider">
-										22 May 2025 - Dhaka, Bangladesh
+										23 May 2025 - Dhaka, Bangladesh
 									</div>
 								</div>
 							</AnimatedGroup>
@@ -114,16 +85,16 @@ export default function HeroSection() {
 								preset="fade-in-blur"
 								speedSegment={0.3}
 								as="h1"
-								className="mt-8 text-balance text-6xl md:text-7xl xl:text-[5.25rem]"
+								className="mt-8 text-balance text-6xl md:text-7xl xl:text-[5.25rem] font-medium"
 							>
 								The Rising Generation Football Tournament 2025
 							</TextEffect>
 
 							<AnimatedGroup variants={transitionVariants}>
 								<p className="text-xl md:text-2xl mb-12 mt-8 max-w-3xl mx-auto text-gray-300 font-light">
-									12 elite university teams. One prestigious championship.
+									16 elite university teams. One prestigious championship.
 									<span className="block mt-2 text-chart-5">
-										Total prize pool: ৳3,50,000
+										Total prize pool: ৳ 3,50,000
 									</span>
 								</p>
 							</AnimatedGroup>

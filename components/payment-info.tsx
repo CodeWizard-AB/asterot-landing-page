@@ -18,14 +18,16 @@ export function PaymentInfo() {
 					<CreditCard className="h-5 w-5 text-chart-5" />
 					<CardTitle>Payment Information</CardTitle>
 				</div>
-				<CardDescription>Registration fee: ৳6,000</CardDescription>
+				<CardDescription>
+					Registration fee: ৳ 8,000 (Eight Thousands Only)
+				</CardDescription>
 			</CardHeader>
 			<CardContent className="space-y-6">
 				<div className="space-y-4">
 					<div className="space-y-2">
 						<h4 className="font-medium flex items-center gap-2">
 							<Image src={BkashLogo} alt="bKash" className="w-20" />
-							bKash Payment
+							BKash Payment
 						</h4>
 						<div className="text-sm grid grid-cols-2 gap-x-4 gap-y-1">
 							<span className="text-muted-foreground">Number:</span>
@@ -44,7 +46,7 @@ export function PaymentInfo() {
 							<span className="text-muted-foreground">Number:</span>
 							<span className="font-medium">01712345678</span>
 							<span className="text-muted-foreground">Type:</span>
-							<span>Merchant</span>
+							<span>Personal</span>
 						</div>
 					</div>
 				</div>
@@ -55,7 +57,7 @@ export function PaymentInfo() {
 						<li>Open bKash/Nagad app</li>
 						<li>Select &quot;Send Money&quot;</li>
 						<li>Enter the number shown above</li>
-						<li>Enter amount: ৳10,000</li>
+						<li>Enter amount: ৳ 10,000</li>
 						<li>Add reference: Your team name</li>
 						<li>Complete payment</li>
 						<li>Save screenshot/receipt</li>
