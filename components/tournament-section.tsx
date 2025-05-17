@@ -22,7 +22,7 @@ export function TournamentSection() {
 			<div className="container max-w-screen-xl mx-auto">
 				<SectionHeading
 					title="Tournament Format"
-					subtitle="A thrilling one-day football championship featuring 12 elite university teams competing for glory."
+					subtitle="A thrilling one-day football championship featuring 16 elite university teams competing for glory."
 				/>
 
 				<div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -35,7 +35,7 @@ export function TournamentSection() {
 								<CardTitle>Prize Pool</CardTitle>
 							</div>
 							<CardDescription>
-								Compete for a total prize pool of BDT 3,50,000
+								Compete for a total prize pool of ৳ 3,50,000
 							</CardDescription>
 						</CardHeader>
 						<CardContent>
@@ -46,7 +46,7 @@ export function TournamentSection() {
 									</div>
 									<div>
 										<h4 className="font-semibold">Champions</h4>
-										<p className="text-muted-foreground">BDT 2,00,000</p>
+										<p className="text-muted-foreground">৳ 2,00,000</p>
 									</div>
 								</div>
 
@@ -56,7 +56,7 @@ export function TournamentSection() {
 									</div>
 									<div>
 										<h4 className="font-semibold">Runners-up</h4>
-										<p className="text-muted-foreground">BDT 1,00,000</p>
+										<p className="text-muted-foreground">৳ 1,00,000</p>
 									</div>
 								</div>
 
@@ -66,7 +66,7 @@ export function TournamentSection() {
 									</div>
 									<div>
 										<h4 className="font-semibold">Semi-finalists</h4>
-										<p className="text-muted-foreground">BDT 25,000 each</p>
+										<p className="text-muted-foreground">৳ 25,000 each</p>
 									</div>
 								</div>
 							</div>

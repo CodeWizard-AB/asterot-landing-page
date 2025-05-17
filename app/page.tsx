@@ -6,6 +6,7 @@ import ContactSection from "@/components/contact-section";
 import TestimonialSection from "@/components/testimonial-section";
 import { RegistrationSection } from "@/components/registration-section";
 import { TournamentSection } from "@/components/tournament-section";
+import { Toaster } from "sonner";
 
 export default function Home() {
 	return (
@@ -19,6 +20,7 @@ export default function Home() {
 				<TeamSection />
 				<ContactSection />
 			</main>
+			<Toaster richColors theme="dark" />
 			<FooterSection />
 		</>
 	);

@@ -5,7 +5,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-import { Upload } from "lucide-react";
+import { Loader2, Upload } from "lucide-react";
 import {
 	Form,
 	FormControl,
@@ -53,7 +53,7 @@ export function RegistrationForm() {
 		}
 	};
 
-	function onSubmit(values: z.infer<typeof formSchema>) {
+	async function onSubmit(values: z.infer<typeof formSchema>) {
 		if (!paymentReceipt) {
 			toast.error("Payment receipt required", {
 				description: "Please upload your payment receipt",
@@ -61,21 +61,47 @@ export function RegistrationForm() {
 			return;
 		}
 
-		// Log the form values for debugging
-		console.log("Form values:", values);
+		try {
+			const formData = new FormData();
 
-		setTimeout(() => {
+			// * Append form values
+			Object.entries(values).forEach(([key, value]) => {
+				formData.append(key, value);
+			});
+
+			// * Append file
+			formData.append("paymentReceipt", paymentReceipt);
+
+			const response = await fetch("https://getform.io/f/ajjmkkwa", {
+				method: "POST",
+				body: formData,
+			});
+
+			if (!response.ok) {
+				const errorData = await response.json().catch(() => null);
+				throw new Error(errorData?.message || "Failed to submit form");
+			}
+
 			toast.success("Registration submitted successfully!", {
 				description: "We'll review your registration and contact you soon.",
 			});
 			form.reset();
 			setPaymentReceipt(null);
-		}, 1500);
+		} catch (error) {
+			toast.error("Failed to submit registration", {
+				description:
+					error instanceof Error ? error.message : "Please try again later",
+			});
+		}
 	}
 
 	return (
 		<Form {...form}>
-			<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+			<form
+				onSubmit={form.handleSubmit(onSubmit)}
+				className="space-y-6"
+				encType="multipart/form-data"
+			>
 				<div className="grid md:grid-cols-2 gap-6">
 					<FormField
 						control={form.control}
@@ -84,7 +110,11 @@ export function RegistrationForm() {
 							<FormItem>
 								<FormLabel>Team Name</FormLabel>
 								<FormControl>
-									<Input placeholder="Enter team name" {...field} />
+									<Input
+										placeholder="Enter team name"
+										{...field}
+										disabled={isSubmitting}
+									/>
 								</FormControl>
 								<FormMessage />
 							</FormItem>
@@ -98,7 +128,11 @@ export function RegistrationForm() {
 							<FormItem>
 								<FormLabel>University Name</FormLabel>
 								<FormControl>
-									<Input placeholder="Enter university name" {...field} />
+									<Input
+										placeholder="Enter university name"
+										{...field}
+										disabled={isSubmitting}
+									/>
 								</FormControl>
 								<FormMessage />
 							</FormItem>
@@ -112,9 +146,13 @@ export function RegistrationForm() {
 						name="managerName"
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel>Coach/Manager Name</FormLabel>
+								<FormLabel>Manager Name</FormLabel>
 								<FormControl>
-									<Input placeholder="Enter coach/manager name" {...field} />
+									<Input
+										placeholder="Enter manager name"
+										{...field}
+										disabled={isSubmitting}
+									/>
 								</FormControl>
 								<FormMessage />
 							</FormItem>
@@ -128,7 +166,12 @@ export function RegistrationForm() {
 							<FormItem>
 								<FormLabel>Email</FormLabel>
 								<FormControl>
-									<Input type="email" placeholder="Contact email" {...field} />
+									<Input
+										type="email"
+										placeholder="Contact email"
+										{...field}
+										disabled={isSubmitting}
+									/>
 								</FormControl>
 								<FormMessage />
 							</FormItem>
@@ -147,6 +190,7 @@ export function RegistrationForm() {
 									type="tel"
 									placeholder="Contact phone number"
 									{...field}
+									disabled={isSubmitting}
 								/>
 							</FormControl>
 							<FormMessage />
@@ -165,6 +209,7 @@ export function RegistrationForm() {
 									onValueChange={field.onChange}
 									defaultValue={field.value}
 									className="flex gap-4"
+									disabled={isSubmitting}
 								>
 									<div className="flex items-center space-x-2">
 										<RadioGroupItem value="bkash" id="bkash" />
@@ -183,15 +228,19 @@ export function RegistrationForm() {
 
 				<div className="space-y-4">
 					<Label>Upload Payment Receipt</Label>
-					<div className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary/50 transition-colors">
+					<div
+						className="border-2 border-dashed rounded-lg p-6 text-center cursor-pointer hover:border-primary/50 transition-colors"
+						onClick={() => document.getElementById("payment-receipt")?.click()}
+					>
 						<Input
 							type="file"
 							accept="image/*,.pdf"
 							className="hidden"
 							id="payment-receipt"
 							onChange={handleFileChange}
+							disabled={isSubmitting}
 						/>
-						<Label htmlFor="payment-receipt" className="cursor-pointer">
+						<div className="flex flex-col items-center">
 							<Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
 							<p className="text-sm text-muted-foreground mb-1">
 								Click to upload payment receipt
@@ -199,7 +248,7 @@ export function RegistrationForm() {
 							<p className="text-xs text-muted-foreground">
 								Supported formats: JPG, PNG, PDF (max 5MB)
 							</p>
-						</Label>
+						</div>
 					</div>
 					{paymentReceipt && (
 						<p className="text-sm text-muted-foreground">
@@ -209,7 +258,14 @@ export function RegistrationForm() {
 				</div>
 
 				<Button type="submit" className="w-full" disabled={isSubmitting}>
-					{isSubmitting ? "Submitting..." : "Submit Registration"}
+					{isSubmitting ? (
+						<>
+							<Loader2 className="mr-2 h-4 w-4 animate-spin" />
+							Submitting...
+						</>
+					) : (
+						"Submit Registration"
+					)}
 				</Button>
 			</form>
 		</Form>
