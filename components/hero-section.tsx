@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { TextEffect } from "@/components/ui/text-effect";
 import { AnimatedGroup } from "@/components/ui/animated-group";
-import { Countdown } from "./ui/counter";
+import { Trophy, Medal, Target, Users } from "lucide-react";
 
 const transitionVariants = {
 	item: {
@@ -26,6 +26,29 @@ const transitionVariants = {
 	},
 };
 
+const PRIZE_INFO = [
+	{
+		icon: Trophy,
+		label: "Champions",
+		value: "৳2,00,000",
+	},
+	{
+		icon: Medal,
+		label: "Runners-up",
+		value: "৳1,00,000",
+	},
+	{
+		icon: Target,
+		label: "Semi-finalists",
+		value: "৳25,000 each",
+	},
+	{
+		icon: Users,
+		label: "Teams",
+		value: "12 Universities",
+	},
+];
+
 export default function HeroSection() {
 	const targetDate = new Date();
 	targetDate.setDate(targetDate.getDate() + 7);
@@ -42,7 +65,7 @@ export default function HeroSection() {
 			</div>
 			<div>
 				<div className="relative pt-24 md:pt-36">
-					<AnimatedGroup
+					{/* <AnimatedGroup
 						variants={{
 							container: {
 								visible: {
@@ -76,9 +99,9 @@ export default function HeroSection() {
 							width="3276"
 							height="4095"
 						/>
-					</AnimatedGroup>
+					</AnimatedGroup> */}
 					<div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"></div>
-					<div className="mx-auto max-w-7xl px-6">
+					<div className="mx-auto max-w-screen-xl px-6">
 						<div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
 							<AnimatedGroup variants={transitionVariants}>
 								<div className="flex items-center justify-center mb-6">
@@ -94,46 +117,32 @@ export default function HeroSection() {
 								as="h1"
 								className="mt-8 text-balance text-6xl md:text-7xl xl:text-[5.25rem]"
 							>
-								The Rising Generatoin Football Cup 2025
+								The Rising Generation Football Tournament 2025
 							</TextEffect>
 
 							<AnimatedGroup variants={transitionVariants}>
-								<div
-									className="animate-fade-in"
-									style={{ animationDelay: "0.8s" }}
-								>
-									<div className="prize-card px-8 py-6 rounded-2xl inline-block">
-										<p className="text-xl font-semibold text-white mb-6 flex items-center justify-center gap-2">
-											{/* <Trophy className="h-6 w-6 text-chart-5" /> */}
-											{/* <span>Prize Pool</span> */}
-										</p>
-										<div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm md:text-base">
-											<div className="space-y-2 p-4 rounded-lg bg-white/5">
-												<p className="font-bold text-2xl text-chart-5">
-													৳100,000
-												</p>
-												<p className="text-white/60">Champion</p>
-											</div>
-											<div className="space-y-2 p-4 rounded-lg bg-white/5">
-												<p className="font-bold text-2xl text-chart-5">
-													৳50,000
-												</p>
-												<p className="text-white/60">Runner-up</p>
-											</div>
-											<div className="space-y-2 p-4 rounded-lg bg-white/5">
-												<p className="font-bold text-2xl text-chart-5">
-													৳15,000
-												</p>
-												<p className="text-white/60">Semi-finalist</p>
-											</div>
-											<div className="space-y-2 p-4 rounded-lg bg-white/5">
-												<p className="font-bold text-2xl text-chart-5">
-													৳15,000
-												</p>
-												<p className="text-white/60">Semi-finalist</p>
+								<p className="text-xl md:text-2xl mb-12 mt-8 max-w-3xl mx-auto text-gray-300 font-light">
+									12 elite university teams. One prestigious championship.
+									<span className="block mt-2 text-chart-5">
+										Total prize pool: ৳3,50,000
+									</span>
+								</p>
+							</AnimatedGroup>
+
+							<AnimatedGroup variants={transitionVariants} className="mt-10">
+								<div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto">
+									{PRIZE_INFO.map((prize) => (
+										<div
+											key={prize.label}
+											className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:border-chart-5/50 transition-all duration-300 group"
+										>
+											<div className="flex flex-col items-center gap-2">
+												<prize.icon className="h-8 w-8 text-chart-5 group-hover:scale-110 transition-transform duration-300" />
+												<p className="text-sm text-gray-400">{prize.label}</p>
+												<p className="text-xl font-bold">{prize.value}</p>
 											</div>
 										</div>
-									</div>
+									))}
 								</div>
 							</AnimatedGroup>
 
@@ -168,7 +177,7 @@ export default function HeroSection() {
 						</div>
 					</div>
 
-					<AnimatedGroup
+					{/* <AnimatedGroup
 						variants={{
 							container: {
 								visible: {
@@ -197,7 +206,7 @@ export default function HeroSection() {
 								></iframe>
 							</div>
 						</div>
-					</AnimatedGroup>
+					</AnimatedGroup> */}
 				</div>
 			</div>
 

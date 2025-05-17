@@ -29,7 +29,7 @@ export const HeroHeader = () => {
 			>
 				<div
 					className={cn(
-						"mx-auto mt-2 max-w-screen-xl px-6 transition-all duration-300 lg:px-12",
+						"mx-auto mt-2 max-w-screen-xl px-6 transition-all duration-300 2xl:px-0",
 						isScrolled &&
 							"bg-background/50 max-w-screen-lg rounded-2xl border backdrop-blur-lg lg:px-5"
 					)}

@@ -19,7 +19,7 @@ export default function TournamentStats() {
 								<stat.icon className="h-6 w-6 text-chart-5" />
 							</div>
 							<div>
-								<p className="text-sm text-muted-foreground">{stat.label}</p>
+								<p className="text-sm text-left text-muted-foreground">{stat.label}</p>
 								<p className="text-2xl font-bold">{stat.value}</p>
 							</div>
 						</div>
