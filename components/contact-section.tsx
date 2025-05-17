@@ -1,65 +1,64 @@
-import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
+import { MailIcon, MapPinIcon, PhoneIcon, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { SectionHeading } from "./section-heading";
+import {
+	Card,
+	CardContent,
+	CardHeader,
+	CardTitle,
+	CardDescription,
+} from "@/components/ui/card";
+import { contactItems } from "@/lib/content";
+
+const iconMap = {
+	MailIcon,
+	MessageCircle,
+	MapPinIcon,
+	PhoneIcon,
+};
 
 export default function ContactSection() {
 	return (
 		<section
-			id="#contact"
-			className="mb-20 lg:mb-28 flex items-center justify-center"
+			id="contact"
+			className="mb-20 flex items-center justify-center px-6"
 		>
-			<div className="text-center">
+			<div className="max-w-screen-xl w-full">
 				<SectionHeading
 					title="Contact Us"
-					subtitle="Our friendly team is always here to chat."
+					subtitle="Our friendly and responsive team is always here to help you out—feel free to reach out anytime."
 				/>
-				<div className="max-w-screen-xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10 px-6 md:px-0">
-					<div className="text-center flex flex-col items-center">
-						<div className="h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full">
-							<MailIcon />
-						</div>
-						<h3 className="mt-6 font-semibold text-xl">Email</h3>
-						<p className="mt-2 text-muted-foreground">
-							Our friendly team is here to help.
-						</p>
-						<Link
-							className="mt-4 font-medium text-primary"
-							href="mailto:akashmoradiya3444@gmail.com"
-						>
-							asterotbd@gmail.com
-						</Link>
-					</div>
-					<div className="text-center flex flex-col items-center">
-						<div className="h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full">
-							<MapPinIcon />
-						</div>
-						<h3 className="mt-6 font-semibold text-xl">Office</h3>
-						<p className="mt-2 text-muted-foreground">
-							Come say hello at our office HQ.
-						</p>
-						<Link
-							className="mt-4 font-medium text-primary"
-							href="https://map.google.com"
-							target="_blank"
-						>
-							100 Smith Street Collingwood <br /> VIC 3066 AU
-						</Link>
-					</div>
-					<div className="text-center flex flex-col items-center">
-						<div className="h-12 w-12 flex items-center justify-center bg-primary/10 text-primary rounded-full">
-							<PhoneIcon />
-						</div>
-						<h3 className="mt-6 font-semibold text-xl">Phone</h3>
-						<p className="mt-2 text-muted-foreground">
-							Mon-Fri from 8am to 5pm.
-						</p>
-						<Link
-							className="mt-4 font-medium text-primary"
-							href="tel:akashmoradiya3444@gmail.com"
-						>
-							+1 (555) 000-0000
-						</Link>
-					</div>
+
+				<div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+					{contactItems.map((item, index) => {
+						const Icon = iconMap[item.icon as keyof typeof iconMap];
+						return (
+							<Card
+								key={index}
+								className="relative overflow-hidden hover:border-primary/50 transition-all duration-300 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md border-white/10 hover:shadow-lg hover:shadow-primary/5"
+							>
+								<div className="absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 rounded-full bg-primary/10"></div>
+								<CardHeader>
+									<div className="flex items-center gap-2 mb-2">
+										<div className="h-10 w-10 flex items-center justify-center bg-primary/10 text-primary rounded-full">
+											<Icon className="h-5 w-5" />
+										</div>
+										<CardTitle>{item.title}</CardTitle>
+									</div>
+									<CardDescription>{item.description}</CardDescription>
+								</CardHeader>
+								<CardContent>
+									<Link
+										className="font-medium hover:text-primary transition-colors"
+										href={item.link.href}
+										target={item.link.target}
+									>
+										{item.link.text}
+									</Link>
+								</CardContent>
+							</Card>
+						);
+					})}
 				</div>
 			</div>
 		</section>

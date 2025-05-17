@@ -31,7 +31,7 @@ export function PaymentInfo() {
 						</h4>
 						<div className="text-sm grid grid-cols-2 gap-x-4 gap-y-1">
 							<span className="text-muted-foreground">Number:</span>
-							<span className="font-medium">01712345678</span>
+							<span className="font-medium">017 1784 8532</span>
 							<span className="text-muted-foreground">Type:</span>
 							<span>Personal</span>
 						</div>
@@ -44,7 +44,7 @@ export function PaymentInfo() {
 						</h4>
 						<div className="text-sm grid grid-cols-2 gap-x-4 gap-y-1">
 							<span className="text-muted-foreground">Number:</span>
-							<span className="font-medium">01712345678</span>
+							<span className="font-medium">017 1784 8539</span>
 							<span className="text-muted-foreground">Type:</span>
 							<span>Personal</span>
 						</div>
@@ -57,7 +57,7 @@ export function PaymentInfo() {
 						<li>Open bKash/Nagad app</li>
 						<li>Select &quot;Send Money&quot;</li>
 						<li>Enter the number shown above</li>
-						<li>Enter amount: ৳ 10,000</li>
+						<li>Enter amount: ৳ 8,000</li>
 						<li>Add reference: Your team name</li>
 						<li>Complete payment</li>
 						<li>Save screenshot/receipt</li>

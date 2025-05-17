@@ -34,8 +34,8 @@ export function RegistrationSection() {
 				<RegistrationTimeline />
 
 				<div className="grid lg:grid-cols-3 gap-8">
-					<div className="lg:col-span-2">
-						<Card>
+					<div className="lg:col-span-2 flex flex-col">
+						<Card className="flex-1">
 							<CardHeader>
 								<CardTitle className="flex items-center gap-2">
 									<Users className="h-5 w-5 text-chart-5" />
@@ -46,7 +46,7 @@ export function RegistrationSection() {
 									team
 								</CardDescription>
 							</CardHeader>
-							<CardContent>
+							<CardContent className="flex-1">
 								<RegistrationForm />
 							</CardContent>
 						</Card>

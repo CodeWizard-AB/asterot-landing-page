@@ -99,7 +99,7 @@ export function RegistrationForm() {
 		<Form {...form}>
 			<form
 				onSubmit={form.handleSubmit(onSubmit)}
-				className="space-y-6"
+				className="space-y-6 w-full h-full grid"
 				encType="multipart/form-data"
 			>
 				<div className="grid md:grid-cols-2 gap-6">

@@ -13,7 +13,7 @@ export default function TeamSection() {
 				subtitle="Get to know the passionate minds driving Bangladesh's top university football tournament."
 			/>
 
-			<div className="mt-10 w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 max-w-screen-lg mx-auto">
+			<div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 max-w-screen-xl mx-auto">
 				{teamMembers.map((member) => (
 					<div key={member.name} className="text-center">
 						<Image
@@ -25,6 +25,7 @@ export default function TeamSection() {
 						/>
 						<h3 className="mt-4 text-lg font-semibold">{member.name}</h3>
 						<p className="text-muted-foreground">{member.title}</p>
+						<p className="mt-3">{member?.bio}</p>
 					</div>
 				))}
 			</div>

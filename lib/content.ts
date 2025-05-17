@@ -70,41 +70,89 @@ export const teamMembers = [
 		title: "Chairman",
 		imageUrl:
 			"https://ik.imagekit.io/xp2qigjdg/jihan.jpg?updatedAt=1747484583346",
+		bio: "Visionary leader and Founder. Guides Asterot's strategic direction.",
 	},
 	{
 		name: "MD Sahadat Hosen",
 		title: "Managing Director",
 		imageUrl:
 			"https://ik.imagekit.io/xp2qigjdg/sakib.jpg?updatedAt=1747484583411",
+		bio: "Heads operations and partnerships. Leads Asterot with precision.",
 	},
 	{
 		name: "Abu Jakaria Apu",
-		title: "Managing Director",
+		title: "Director",
 		imageUrl:
 			"https://ik.imagekit.io/xp2qigjdg/opu.jpg?updatedAt=1747484583248",
+		bio: "Oversees finance and logistics. Keeps Asterot running smoothly.",
 	},
 	{
 		name: "MD Faysal Mahmud",
 		title: "Director",
 		imageUrl:
 			"https://ik.imagekit.io/xp2qigjdg/faysal.jpg?updatedAt=1747484583394",
+		bio: "Planning expert and organizer. Shapes Asterot's event blueprint.",
 	},
 	{
 		name: "Abu Sayed Bin Noman",
 		title: "Director",
 		imageUrl:
 			"https://ik.imagekit.io/xp2qigjdg/pritom.jpg?updatedAt=1747484583850",
+		bio: "Team builder and people-first leader. Fuels Asterot's HR strength.",
 	},
 	{
 		name: "Al-Ebne Noman",
 		title: "Director",
 		imageUrl:
 			"https://ik.imagekit.io/xp2qigjdg/noman.jpg?updatedAt=1747484583859",
+		bio: "Admin and relationship strategist. Strengthens Asterot's network.",
 	},
 	{
 		name: "Anunay Argha",
-		title: "Cheif Technology Officer",
+		title: "Chief Technology Officer",
 		imageUrl:
 			"https://ik.imagekit.io/xp2qigjdg/anunay.jpg?updatedAt=1747484583416",
+		bio: "Front-end specialist. Powers Asterot's tech and digital presence.",
+	},
+];
+
+export const contactItems = [
+	{
+		icon: "MailIcon",
+		title: "Email",
+		description: "Our friendly team is here to help.",
+		link: {
+			href: "mailto:asterotbd@gmail.com",
+			text: "asterotbd@gmail.com",
+		},
+	},
+	{
+		icon: "MessageCircle",
+		title: "WhatsApp",
+		description: "Chat with us on WhatsApp.",
+		link: {
+			href: "https://wa.me/8801869322827",
+			text: "Start new chat",
+			target: "_blank",
+		},
+	},
+	{
+		icon: "MapPinIcon",
+		title: "Office",
+		description: "Come say hello at our office HQ.",
+		link: {
+			href: "https://www.google.com/maps/place/5b,+5+Razia+Sultana+Rd,+Dhaka/data=!4m2!3m1!1s0x3755bf58f89140f5:0x7501b3da29f1d549?sa=X&ved=1t:242&ictx=111",
+			text: "5B/5 Razia Sultana Road Mohammadpur, Dhaka 1207",
+			target: "_blank",
+		},
+	},
+	{
+		icon: "PhoneIcon",
+		title: "Phone",
+		description: "Mon-Fri from 8am to 5pm.",
+		link: {
+			href: "tel:+8801869322827",
+			text: "+88 018 6932 2827",
+		},
 	},
 ];

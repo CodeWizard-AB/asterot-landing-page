@@ -38,7 +38,10 @@ export default function TestimonialSection() {
 									</div>
 								</div>
 								<Button variant="ghost" size="icon" asChild>
-									<Link href="#" target="_blank">
+									<Link
+										href="https://www.facebook.com/profile.php?id=61573693107328&sk=reviews"
+										target="_blank"
+									>
 										<Facebook className="w-20" />
 									</Link>
 								</Button>
