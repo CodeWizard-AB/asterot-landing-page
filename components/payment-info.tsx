@@ -19,7 +19,7 @@ export function PaymentInfo() {
 					<CardTitle>Payment Information</CardTitle>
 				</div>
 				<CardDescription>
-					Registration fee: ৳ 8,000 (Eight Thousands Only)
+					Registration fee: BDT 8,000 (Eight Thousands Only)
 				</CardDescription>
 			</CardHeader>
 			<CardContent className="space-y-6">
@@ -57,7 +57,7 @@ export function PaymentInfo() {
 						<li>Open bKash/Nagad app</li>
 						<li>Select &quot;Send Money&quot;</li>
 						<li>Enter the number shown above</li>
-						<li>Enter amount: ৳ 10,000</li>
+						<li>Enter amount: BDT 10,000</li>
 						<li>Add reference: Your team name</li>
 						<li>Complete payment</li>
 						<li>Save screenshot/receipt</li>

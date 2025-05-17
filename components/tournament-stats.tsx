@@ -2,10 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Trophy, Medal, Target } from "lucide-react";
 
 const TOURNAMENT_STATS = [
-	{ icon: Trophy, label: "Total Prize Pool", value: "৳  3,50,000" },
-	{ icon: Medal, label: "Champions Prize", value: "৳  2,00,000" },
-	{ icon: Medal, label: "Runners-up Prize", value: "৳  1,00,000" },
-	{ icon: Target, label: "Semi-finalists", value: "৳  25,000 each" },
+	{ icon: Trophy, label: "Total Prize Pool", value: "BDT 3,50,000" },
+	{ icon: Medal, label: "Champions Prize", value: "BDT 2,00,000" },
+	{ icon: Medal, label: "Runners-up Prize", value: "BDT 1,00,000" },
+	{ icon: Target, label: "Semi-finalists", value: "BDT 25,000 each" },
 ];
 
 export default function TournamentStats() {
