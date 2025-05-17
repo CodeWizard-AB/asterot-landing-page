@@ -3,8 +3,7 @@ import { Card, CardContent } from "./ui/card";
 import { Countdown } from "./ui/counter";
 
 export default function RegistrationTimeline() {
-	const targetDate = new Date();
-	targetDate.setDate(targetDate.getDate() + 7);
+	const targetDate = new Date("2025-05-22T22:00:00");
 
 	return (
 		<Card className="mb-8">
@@ -17,7 +16,7 @@ export default function RegistrationTimeline() {
 						<div>
 							<h3 className="font-bold text-lg">Registration Timeline</h3>
 							<p className="text-muted-foreground">
-								The deadline for registration is 22 May, 2025
+								The deadline for registration is 22 May, 2025, till 10:00 PM
 							</p>
 						</div>
 					</div>
