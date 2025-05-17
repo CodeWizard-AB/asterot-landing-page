@@ -4,6 +4,7 @@ import { testimonials } from "@/lib/content";
 import { Facebook } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { SectionHeading } from "./section-heading";
 
 export default function TestimonialSection() {
 	return (
@@ -12,16 +13,10 @@ export default function TestimonialSection() {
 			className="min-h-screen flex justify-center items-center py-12 px-6"
 		>
 			<div>
-				<div className="text-center max-w-xl mx-auto mb-16">
-					<h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
-						What They’re Saying
-					</h2>
-					<p className="mt-4 text-base sm:text-lg">
-						Real voices from the players, coaches, and partners who’ve
-						experienced the energy, passion, and professionalism behind our
-						tournaments.
-					</p>
-				</div>
+				<SectionHeading
+					title="Testimonials"
+					subtitle="Hear what teams and fans say about their unforgettable experiences at our tournament."
+				/>
 				<div className="max-w-screen-xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-8">
 					{testimonials.map((testimonial) => (
 						<div

@@ -85,7 +85,7 @@ export default function HeroSection() {
 								preset="fade-in-blur"
 								speedSegment={0.3}
 								as="h1"
-								className="mt-8 text-balance text-6xl md:text-7xl xl:text-[5.25rem] font-medium"
+								className="text-5xl md:text-7xl lg:text-8xl font-semibold mb-6 leading-tight font-heading mt-8 text-balance xl:text-[5.25rem]"
 							>
 								The Rising Generation Football Tournament 2025
 							</TextEffect>

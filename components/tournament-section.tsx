@@ -18,7 +18,7 @@ import {
 
 export function TournamentSection() {
 	return (
-		<section id="tournament" className="my-40">
+		<section id="tournament" className="my-20 lg:my-40 px-6 2xl:px-0">
 			<div className="container max-w-screen-xl mx-auto">
 				<SectionHeading
 					title="Tournament Format"

@@ -19,7 +19,7 @@ export function RegistrationSection() {
 	return (
 		<section
 			id="registration"
-			className="py-20 px-6 md:px-6 2xl:px-0 bg-background max-w-screen-xl mx-auto"
+			className="mt-20 px-6 md:px-6 2xl:px-0 bg-background max-w-screen-xl mx-auto"
 		>
 			<div className="container mx-auto">
 				<SectionHeading
@@ -63,7 +63,7 @@ export function RegistrationSection() {
 							<AlertTitle>Important Notice</AlertTitle>
 							<AlertDescription>
 								Registration will be confirmed only after payment verification.
-								The deadline for registration is March 15, 2025.
+								The deadline for registration is May 22, 2025.
 							</AlertDescription>
 						</Alert>
 					</div>
