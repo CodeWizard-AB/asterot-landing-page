@@ -29,17 +29,17 @@ const PRIZE_INFO = [
 	{
 		icon: Trophy,
 		label: "Champions",
-		value: "৳  2,00,000",
+		value: "BDT 2,00,000",
 	},
 	{
 		icon: Medal,
 		label: "Runners-up",
-		value: "৳  1,00,000",
+		value: "BDT 1,00,000",
 	},
 	{
 		icon: Target,
 		label: "Semi-finalists",
-		value: "৳  25,000 each",
+		value: "BDT 25,000 each",
 	},
 	{
 		icon: Users,
@@ -94,7 +94,7 @@ export default function HeroSection() {
 								<p className="text-xl md:text-2xl mb-12 mt-8 max-w-3xl mx-auto text-gray-300 font-light">
 									16 elite university teams. One prestigious championship.
 									<span className="block mt-2 text-chart-5">
-										Total prize pool: ৳ 3,50,000
+										Total prize pool: BDT 3,50,000
 									</span>
 								</p>
 							</AnimatedGroup>
