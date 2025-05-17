@@ -19,12 +19,12 @@ export const testimonials = [
 	},
 	{
 		id: 2,
-		name: "Sk Mahmudul Hassan",
-		designation: "Psychologist at Living With Wellness",
-		company: "Living With Wellness",
+		name: "Raishatun Sohana",
+		designation: "Student of ULAB",
+		company: "BrandBoost",
 		testimonial:
-			"If you're looking for an event management company that truly cares about quality, look no further than Asterot. Their commitment to perfection is evident in everything they do!",
-		avatar: "https://randomuser.me/api/portraits/women/6.jpg",
+			"Asterot is truly a gem in the event management industry!  Their team is warm, responsive, and incredibly organized",
+		avatar: "https://randomuser.me/api/portraits/women/4.jpg",
 	},
 	{
 		id: 3,
@@ -37,12 +37,12 @@ export const testimonials = [
 	},
 	{
 		id: 4,
-		name: "Raishatun Sohana",
-		designation: "Student of ULAB",
-		company: "BrandBoost",
+		name: "Sk Mahmudul Hassan",
+		designation: "Psychologist at Living With Wellness",
+		company: "Living With Wellness",
 		testimonial:
-			"Asterot is truly a gem in the event management industry!  Their team is warm, responsive, and incredibly organized",
-		avatar: "https://randomuser.me/api/portraits/women/4.jpg",
+			"If you're looking for an event management company that truly cares about quality, look no further than Asterot. Their commitment to perfection is evident in everything they do!",
+		avatar: "https://randomuser.me/api/portraits/women/6.jpg",
 	},
 	{
 		id: 5,

@@ -10,7 +10,7 @@ export default function TestimonialSection() {
 	return (
 		<section
 			id="#testimonials"
-			className="min-h-screen flex justify-center items-center py-12 px-6"
+			className="mb-20 xl:mb-40 flex justify-center items-center px-6"
 		>
 			<div>
 				<SectionHeading

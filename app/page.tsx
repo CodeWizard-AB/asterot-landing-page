@@ -7,6 +7,7 @@ import TestimonialSection from "@/components/testimonial-section";
 import { RegistrationSection } from "@/components/registration-section";
 import { TournamentSection } from "@/components/tournament-section";
 import { Toaster } from "sonner";
+import BenefitSection from "@/components/benefits-section";
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 				<HeroSection />
 				<TournamentSection />
 				<RegistrationSection />
+				<BenefitSection />
 				<TestimonialSection />
 				<TeamSection />
 				<ContactSection />

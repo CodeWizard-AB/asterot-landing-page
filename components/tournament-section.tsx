@@ -170,12 +170,6 @@ export function TournamentSection() {
 										11-a-side full field matches
 									</p>
 								</div>
-								<div>
-									<h4 className="font-medium">Facilities</h4>
-									<p className="text-muted-foreground">
-										FIFA standard pitch, changing rooms, medical facilities
-									</p>
-								</div>
 							</div>
 						</CardContent>
 					</Card>
@@ -188,22 +182,22 @@ export function TournamentSection() {
 							</div>
 						</CardHeader>
 						<CardContent>
-							<div className="space-y-3">
+							<div className="grid grid-cols-2 gap-4">
 								<div>
 									<h4 className="font-medium">Group Stage</h4>
-									<p className="text-muted-foreground">8:00 AM - 2:00 PM</p>
+									<p className="text-muted-foreground">8:00 AM - 3:30 PM</p>
 								</div>
 								<div>
 									<h4 className="font-medium">Quarter Finals</h4>
-									<p className="text-muted-foreground">2:30 PM - 4:30 PM</p>
+									<p className="text-muted-foreground">4:00 PM - 5:30 PM</p>
 								</div>
 								<div>
 									<h4 className="font-medium">Semi Finals</h4>
-									<p className="text-muted-foreground">5:00 PM - 6:30 PM</p>
+									<p className="text-muted-foreground">6:00 PM - 7:30 PM</p>
 								</div>
 								<div>
 									<h4 className="font-medium">Final Match</h4>
-									<p className="text-muted-foreground">7:30 PM - 9:00 PM</p>
+									<p className="text-muted-foreground">8:00 PM - 9:30 PM</p>
 								</div>
 							</div>
 						</CardContent>

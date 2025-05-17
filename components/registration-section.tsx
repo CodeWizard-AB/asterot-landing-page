@@ -19,7 +19,7 @@ export function RegistrationSection() {
 	return (
 		<section
 			id="registration"
-			className="mt-20 px-6 md:px-6 2xl:px-0 bg-background max-w-screen-xl mx-auto"
+			className="mb-20 xl:mb-40 px-6 md:px-6 2xl:px-0 bg-background max-w-screen-xl mx-auto"
 		>
 			<div className="container mx-auto">
 				<SectionHeading
