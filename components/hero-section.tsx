@@ -1,9 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { TextEffect } from "@/components/ui/text-effect";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { Trophy, Medal, Target, Users } from "lucide-react";
+import orionLogo from "@/assets/Orion-logo.png";
+import ksrmLogo from "@/assets/ksrm-logo.jpg";
 
 const transitionVariants = {
 	item: {
@@ -128,10 +131,10 @@ export default function HeroSection() {
 									},
 									...transitionVariants,
 								}}
-								className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
+								className="mt-12 flex flex-col items-center justify-center gap-6 md:flex-row"
 							>
 								<Button asChild size="lg" className="text-base" key={1}>
-									<Link href="#link">
+									<Link href="#registration">
 										<span className="text-nowrap">Register Today</span>
 									</Link>
 								</Button>
@@ -180,92 +183,33 @@ export default function HeroSection() {
 				</div>
 			</div>
 
-			{/* <div className="bg-background relative z-10 py-16">
+			<div className="bg-background relative z-10 pt-16">
 				<div className="m-auto max-w-5xl px-6">
 					<h2 className="text-center text-lg font-medium">
-						Your favorite companies are our partners.
+						Your favorite companies are our sponsors.
 					</h2>
-					<div className="mx-auto mt-12 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-12">
-						<img
-							className="h-5 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/nvidia.svg"
-							alt="Nvidia Logo"
-							height="20"
-							width="auto"
-						/>
-						<img
-							className="h-4 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/column.svg"
-							alt="Column Logo"
-							height="16"
-							width="auto"
-						/>
-						<img
-							className="h-4 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/github.svg"
-							alt="GitHub Logo"
-							height="16"
-							width="auto"
-						/>
-						<img
-							className="h-5 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/nike.svg"
-							alt="Nike Logo"
-							height="20"
-							width="auto"
-						/>
-						<img
-							className="h-4 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/laravel.svg"
-							alt="Laravel Logo"
-							height="16"
-							width="auto"
-						/>
-						<img
-							className="h-7 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/lilly.svg"
-							alt="Lilly Logo"
-							height="28"
-							width="auto"
-						/>
-						<img
-							className="h-5 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-							alt="Lemon Squeezy Logo"
-							height="20"
-							width="auto"
-						/>
-						<img
-							className="h-6 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/openai.svg"
-							alt="OpenAI Logo"
-							height="24"
-							width="auto"
-						/>
-						<img
-							className="h-4 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/tailwindcss.svg"
-							alt="Tailwind CSS Logo"
-							height="16"
-							width="auto"
-						/>
-						<img
-							className="h-5 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/vercel.svg"
-							alt="Vercel Logo"
-							height="20"
-							width="auto"
-						/>
-						<img
-							className="h-5 w-fit dark:invert"
-							src="https://html.tailus.io/blocks/customers/zapier.svg"
-							alt="Zapier Logo"
-							height="20"
-							width="auto"
-						/>
+					<div className="mx-auto mt-12 flex max-w-4xl flex-wrap items-center justify-center gap-x-2 gap-y-8 sm:gap-x-4 sm:gap-y-12">
+						<div className="relative h-32 w-64">
+							<Image
+								src={orionLogo}
+								alt="Orion Logo"
+								fill
+								className="object-contain"
+								placeholder="blur"
+							/>
+						</div>
+						<div className="relative h-32 w-64">
+							<Image
+								src={ksrmLogo}
+								alt="KSRM Logo"
+								fill
+								className="object-contain"
+								placeholder="blur"
+							/>
+						</div>
 					</div>
 				</div>
-			</div> */}
+			</div>
 		</section>
 	);
 }

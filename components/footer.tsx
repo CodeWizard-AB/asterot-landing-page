@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function FooterSection() {
 	return (
-		<footer className="py-16">
+		<footer className="pb-16">
 			<div className="mx-auto max-w-5xl px-6">
 				<Link href="/" aria-label="go home" className="mx-auto block size-fit">
 					<Logo />

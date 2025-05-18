@@ -50,13 +50,13 @@ const benefits = [
 
 export default function BenefitSection() {
 	return (
-		<div className="mb-20 xl:mb-40 flex items-center justify-center">
-			<div>
+		<div className="mb-20 xl:mb-40 flex items-center justify-center px-6 2xl:px-0">
+			<div className="container max-w-screen-xl mx-auto">
 				<SectionHeading
 					title="Beyond the Game"
 					subtitle="More than matches—enjoy exclusive benefits that elevate your tournament experience."
 				/>
-				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-screen-xl mx-auto px-6">
+				<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-screen-xl mx-auto">
 					{benefits.map((benefit) => (
 						<div
 							key={benefit.title}

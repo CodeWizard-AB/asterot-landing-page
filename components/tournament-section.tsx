@@ -22,7 +22,7 @@ export function TournamentSection() {
 			<div className="container max-w-screen-xl mx-auto">
 				<SectionHeading
 					title="Tournament Format"
-					subtitle="A thrilling one-day football championship featuring 16 elite university teams competing for glory."
+					subtitle="An exciting one-day futsal championship featuring 16 elite university teams competing for glory."
 				/>
 
 				<div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -80,7 +80,8 @@ export function TournamentSection() {
 								<CardTitle>Tournament Structure</CardTitle>
 							</div>
 							<CardDescription>
-								FIFA World Cup style format with group stages and knockouts
+								FIFA Futsal World Cup style format with group stages and
+								knockouts
 							</CardDescription>
 						</CardHeader>
 						<CardContent>
@@ -143,7 +144,7 @@ export function TournamentSection() {
 								</div>
 								<div className="flex justify-between items-center">
 									<span className="text-muted-foreground">Tournament Day</span>
-									<span className="font-medium">May 25, 2025</span>
+									<span className="font-medium">May 23, 2025</span>
 								</div>
 							</div>
 						</CardContent>
@@ -159,15 +160,16 @@ export function TournamentSection() {
 						<CardContent>
 							<div className="space-y-3">
 								<div>
-									<h4 className="font-medium">Main Stadium</h4>
+									<h4 className="font-medium">Main Venue</h4>
 									<p className="text-muted-foreground">
-										Bangabandhu National Stadium
+										Sher-e-Bangla Agricultural University / Government College
+										of Physical Education
 									</p>
 								</div>
 								<div>
 									<h4 className="font-medium">Match Format</h4>
 									<p className="text-muted-foreground">
-										11-a-side full field matches
+										Futsal (7-a-side) matches on outdoor field
 									</p>
 								</div>
 							</div>
@@ -185,19 +187,19 @@ export function TournamentSection() {
 							<div className="grid grid-cols-2 gap-4">
 								<div>
 									<h4 className="font-medium">Group Stage</h4>
-									<p className="text-muted-foreground">8:00 AM - 3:30 PM</p>
+									<p className="text-muted-foreground">8:00 AM - 1:00 PM</p>
 								</div>
 								<div>
 									<h4 className="font-medium">Quarter Finals</h4>
-									<p className="text-muted-foreground">4:00 PM - 5:30 PM</p>
+									<p className="text-muted-foreground">2:00 PM - 3:00 PM</p>
 								</div>
 								<div>
 									<h4 className="font-medium">Semi Finals</h4>
-									<p className="text-muted-foreground">6:00 PM - 7:30 PM</p>
+									<p className="text-muted-foreground">3:00 PM - 4:00 PM</p>
 								</div>
 								<div>
 									<h4 className="font-medium">Final Match</h4>
-									<p className="text-muted-foreground">8:00 PM - 9:30 PM</p>
+									<p className="text-muted-foreground">4:00 PM - 5:00 PM</p>
 								</div>
 							</div>
 						</CardContent>
