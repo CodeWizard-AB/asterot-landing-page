@@ -91,6 +91,18 @@ export function TournamentSection() {
 										<Users className="h-4 w-4 text-chart-5" />
 									</div>
 									<div>
+										<h4 className="font-semibold">Team Composition</h4>
+										<p className="text-muted-foreground">
+											10 players with 1 team manager
+										</p>
+									</div>
+								</div>
+
+								<div className="flex items-start gap-3">
+									<div className="mt-1 bg-primary/10 p-1.5 rounded-full">
+										<Users className="h-4 w-4 text-chart-5" />
+									</div>
+									<div>
 										<h4 className="font-semibold">Group Stage</h4>
 										<p className="text-muted-foreground">
 											4 groups with 4 teams each
