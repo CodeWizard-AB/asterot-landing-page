@@ -34,8 +34,8 @@ export function RegistrationSection() {
 				<RegistrationTimeline />
 
 				<div className="grid lg:grid-cols-3 gap-8">
-					<div className="lg:col-span-2 flex flex-col">
-						<Card className="flex-1">
+					<div className="lg:col-span-2 flex flex-col space-y-8">
+						<Card>
 							<CardHeader>
 								<CardTitle className="flex items-center gap-2">
 									<Users className="h-5 w-5 text-chart-5" />
@@ -50,10 +50,6 @@ export function RegistrationSection() {
 								<RegistrationForm />
 							</CardContent>
 						</Card>
-					</div>
-
-					<div className="space-y-6">
-						<PaymentInfo />
 
 						<Alert
 							variant="destructive"
@@ -66,6 +62,10 @@ export function RegistrationSection() {
 								The deadline for registration is May 22, 2025.
 							</AlertDescription>
 						</Alert>
+					</div>
+
+					<div className="lg:row-span-2 h-full">
+						<PaymentInfo />
 					</div>
 				</div>
 			</div>

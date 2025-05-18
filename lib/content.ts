@@ -1,3 +1,7 @@
+import BkashLogo from "@/assets/BKash-Logo.svg";
+import NagadLogo from "@/assets/Nagad-Logo.svg";
+import RocketLogo from "@/assets/Rocket-Logo.svg";
+
 export const menuItems = [
 	{ name: "About", href: "#about" },
 	{ name: "Tournament", href: "#tournament" },
@@ -131,7 +135,7 @@ export const contactItems = [
 		title: "WhatsApp",
 		description: "Chat with us on WhatsApp.",
 		link: {
-			href: "https://wa.me/8801869322827",
+			href: "https://wa.me/8801325274642",
 			text: "Start new chat",
 			target: "_blank",
 		},
@@ -151,8 +155,29 @@ export const contactItems = [
 		title: "Phone",
 		description: "Mon-Fri from 8am to 5pm.",
 		link: {
-			href: "tel:+8801869322827",
-			text: "+88 018 6932 2827",
+			href: "tel:+8801325274642",
+			text: "+880 1325-274642",
 		},
+	},
+];
+
+export const paymentMethods = [
+	{
+		name: "bKash",
+		logo: BkashLogo,
+		number: "017 1784 8532",
+		type: "Personal",
+	},
+	{
+		name: "Nagad",
+		logo: NagadLogo,
+		number: "017 1784 8539",
+		type: "Personal",
+	},
+	{
+		name: "Rocket",
+		logo: RocketLogo,
+		number: "017 1784 8539",
+		type: "Personal",
 	},
 ];

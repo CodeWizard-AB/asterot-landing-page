@@ -5,10 +5,9 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { CreditCard } from "lucide-react";
+import { paymentMethods } from "@/lib/content";
+import { CreditCard, Receipt } from "lucide-react";
 import Image from "next/image";
-import BkashLogo from "@/assets/BKash-Logo.svg";
-import NagadLogo from "@/assets/Nagad-Logo.svg";
 
 export function PaymentInfo() {
 	return (
@@ -24,36 +23,32 @@ export function PaymentInfo() {
 			</CardHeader>
 			<CardContent className="space-y-6">
 				<div className="space-y-4">
-					<div className="space-y-2">
-						<h4 className="font-medium flex items-center gap-2">
-							<Image src={BkashLogo} alt="bKash" className="w-20" />
-							BKash Payment
-						</h4>
-						<div className="text-sm grid grid-cols-2 gap-x-4 gap-y-1">
-							<span className="text-muted-foreground">Number:</span>
-							<span className="font-medium">017 1784 8532</span>
-							<span className="text-muted-foreground">Type:</span>
-							<span>Personal</span>
+					{paymentMethods.map((method) => (
+						<div key={method.name} className="space-y-2">
+							<h4 className="font-medium flex items-center gap-2">
+								<Image
+									src={method.logo}
+									alt={method.name}
+									className="w-20 -ml-2.5"
+								/>
+								{method.name} Payment
+							</h4>
+							<div className="text-sm grid grid-cols-2 gap-x-4 gap-y-1">
+								<span className="text-muted-foreground">Number:</span>
+								<span className="font-medium">{method.number}</span>
+								<span className="text-muted-foreground">Type:</span>
+								<span>{method.type}</span>
+							</div>
 						</div>
-					</div>
-
-					<div className="space-y-2">
-						<h4 className="font-medium flex items-center gap-2">
-							<Image src={NagadLogo} alt="nagad" className="w-20" />
-							Nagad Payment
-						</h4>
-						<div className="text-sm grid grid-cols-2 gap-x-4 gap-y-1">
-							<span className="text-muted-foreground">Number:</span>
-							<span className="font-medium">017 1784 8539</span>
-							<span className="text-muted-foreground">Type:</span>
-							<span>Personal</span>
-						</div>
-					</div>
+					))}
 				</div>
 
-				<div className="bg-muted p-3 rounded-lg text-sm">
-					<p className="font-medium mb-2">Payment Steps:</p>
-					<ol className="list-decimal list-inside space-y-1 text-muted-foreground">
+				<div className="bg-muted/50 p-4 rounded-lg space-y-4">
+					<div className="flex items-center gap-2 text-sm font-medium">
+						<Receipt className="h-4 w-4" />
+						<span>Payment Steps:</span>
+					</div>
+					<ol className="list-decimal list-inside space-y-2 text-sm text-muted-foreground">
 						<li>Open bKash/Nagad app</li>
 						<li>Select &quot;Send Money&quot;</li>
 						<li>Enter the number shown above</li>
