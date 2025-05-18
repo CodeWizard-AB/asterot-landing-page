@@ -171,7 +171,7 @@ export const paymentMethods = [
 	{
 		name: "Nagad",
 		logo: NagadLogo,
-		number: "017 1784 8539",
+		number: "017 1784 8532",
 		type: "Personal",
 	},
 	{

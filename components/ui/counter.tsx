@@ -40,33 +40,33 @@ export function Countdown({ targetDate, className }: CountdownProps) {
 
 	return (
 		<div
-			className={`flex items-center justify-center gap-4 md:gap-6 w-full ${
+			className={`flex items-center justify-center gap-2 md:gap-4 w-full ${
 				className || ""
 			}`}
 		>
 			<div className="flex flex-col items-center">
-				<div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-primary/10 dark:bg-primary/20 backdrop-blur-sm rounded-lg w-16 md:w-20 h-16 md:h-20 flex items-center justify-center shadow-lg border border-white/10">
+				<div className="text-lg md:text-xl lg:text-2xl font-bold bg-primary/10 dark:bg-primary/20 backdrop-blur-sm rounded-lg w-12 md:w-16 h-12 md:h-16 flex items-center justify-center shadow-lg border border-white/10">
 					{padNumber(timeLeft.days)}
 				</div>
-				<span className="text-sm mt-2 text-muted-foreground">Days</span>
+				<span className="text-xs mt-1 text-muted-foreground">Days</span>
 			</div>
 			<div className="flex flex-col items-center">
-				<div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-primary/10 dark:bg-primary/20 backdrop-blur-sm rounded-lg w-16 md:w-20 h-16 md:h-20 flex items-center justify-center shadow-lg border border-white/10">
+				<div className="text-lg md:text-xl lg:text-2xl font-bold bg-primary/10 dark:bg-primary/20 backdrop-blur-sm rounded-lg w-12 md:w-16 h-12 md:h-16 flex items-center justify-center shadow-lg border border-white/10">
 					{padNumber(timeLeft.hours)}
 				</div>
-				<span className="text-sm mt-2 text-muted-foreground">Hours</span>
+				<span className="text-xs mt-1 text-muted-foreground">Hours</span>
 			</div>
 			<div className="flex flex-col items-center">
-				<div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-primary/10 dark:bg-primary/20 backdrop-blur-sm rounded-lg w-16 md:w-20 h-16 md:h-20 flex items-center justify-center shadow-lg border border-white/10">
+				<div className="text-lg md:text-xl lg:text-2xl font-bold bg-primary/10 dark:bg-primary/20 backdrop-blur-sm rounded-lg w-12 md:w-16 h-12 md:h-16 flex items-center justify-center shadow-lg border border-white/10">
 					{padNumber(timeLeft.minutes)}
 				</div>
-				<span className="text-sm mt-2 text-muted-foreground">Minutes</span>
+				<span className="text-xs mt-1 text-muted-foreground">Minutes</span>
 			</div>
 			<div className="flex flex-col items-center">
-				<div className="text-2xl md:text-3xl lg:text-4xl font-bold bg-primary/10 dark:bg-primary/20 backdrop-blur-sm rounded-lg w-16 md:w-20 h-16 md:h-20 flex items-center justify-center shadow-lg border border-white/10">
+				<div className="text-lg md:text-xl lg:text-2xl font-bold bg-primary/10 dark:bg-primary/20 backdrop-blur-sm rounded-lg w-12 md:w-16 h-12 md:h-16 flex items-center justify-center shadow-lg border border-white/10">
 					{padNumber(timeLeft.seconds)}
 				</div>
-				<span className="text-sm mt-2 text-muted-foreground">Seconds</span>
+				<span className="text-xs mt-1 text-muted-foreground">Seconds</span>
 			</div>
 		</div>
 	);

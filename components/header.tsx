@@ -13,6 +13,10 @@ export const HeroHeader = () => {
 	const [menuState, setMenuState] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 
+	const handleLinkClick = () => {
+		setMenuState(false);
+	};
+
 	useEffect(() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 50);
@@ -61,6 +65,7 @@ export const HeroHeader = () => {
 										<Link
 											href={item.href}
 											className="text-muted-foreground hover:text-accent-foreground block duration-150"
+											onClick={handleLinkClick}
 										>
 											<span>{item.name}</span>
 										</Link>
@@ -77,6 +82,7 @@ export const HeroHeader = () => {
 											<Link
 												href={item.href}
 												className="text-muted-foreground hover:text-accent-foreground block duration-150"
+												onClick={handleLinkClick}
 											>
 												<span>{item.name}</span>
 											</Link>
