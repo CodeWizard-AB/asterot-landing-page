@@ -177,7 +177,7 @@ export const paymentMethods = [
 	{
 		name: "Rocket",
 		logo: RocketLogo,
-		number: "017 1784 8539",
+		number: "017 1784 85329",
 		type: "Personal",
 	},
 ];
