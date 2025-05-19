@@ -194,20 +194,18 @@ export default function HeroSection() {
 					<div className="mx-auto mt-12 flex max-w-4xl flex-wrap items-center justify-center gap-x-2 gap-y-8 sm:gap-x-4 sm:gap-y-12">
 						<div className="relative h-32 w-64">
 							<Image
-								src={orionLogo}
-								alt="Orion Logo"
-								fill
-								className="object-contain"
-								placeholder="blur"
-							/>
-						</div>
-						<div className="relative h-32 w-64">
-							<Image
 								src={ksrmLogo}
 								alt="KSRM Logo"
 								fill
 								className="object-contain"
-								placeholder="blur"
+							/>
+						</div>
+						<div className="relative h-32 w-64">
+							<Image
+								src={orionLogo}
+								alt="Orion Logo"
+								fill
+								className="object-contain"
 							/>
 						</div>
 					</div>
