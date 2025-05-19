@@ -174,8 +174,7 @@ export function TournamentSection() {
 								<div>
 									<h4 className="font-medium">Main Venue</h4>
 									<p className="text-muted-foreground">
-										Sher-e-Bangla Agricultural University / Government College
-										of Physical Education
+										Sher-e-Bangla Agricultural University
 									</p>
 								</div>
 								<div>
