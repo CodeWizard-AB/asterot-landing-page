@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 		siteName: "Asterot Bangladesh Limited",
 		images: [
 			{
-				url: "/og-image.jpg",
+				url: "https://ik.imagekit.io/xp2qigjdg/Cover%20Banner.jpg?updatedAt=1747635886021",
 				width: 1200,
 				height: 630,
 				alt: "Asterot Bangladesh Limited",
@@ -41,7 +41,9 @@ export const metadata: Metadata = {
 		title: "Asterot Bangladesh Limited | Event Management Experts",
 		description:
 			"Professional event management services in Bangladesh. Currently organizing the Inter-University Football Championship.",
-		images: ["/twitter-image.jpg"],
+		images: [
+			"https://ik.imagekit.io/xp2qigjdg/Cover%20Banner.jpg?updatedAt=1747635886021",
+		],
 	},
 	robots: {
 		index: true,
