@@ -219,6 +219,10 @@ export function RegistrationForm() {
 										<RadioGroupItem value="nagad" id="nagad" />
 										<Label htmlFor="nagad">Nagad</Label>
 									</div>
+									<div className="flex items-center space-x-2">
+										<RadioGroupItem value="rocket" id="rocket" />
+										<Label htmlFor="rocket">Rocket</Label>
+									</div>
 								</RadioGroup>
 							</FormControl>
 							<FormMessage />
