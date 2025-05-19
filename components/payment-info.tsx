@@ -35,7 +35,11 @@ export function PaymentInfo() {
 							</h4>
 							<div className="text-sm grid grid-cols-2 gap-x-4 gap-y-1">
 								<span className="text-muted-foreground">Number:</span>
-								<span className="font-medium">{method.number}</span>
+								<div className="font-medium">
+									{method.number.split("/").map((num, index) => (
+										<div key={index}>{num.trim()}</div>
+									))}
+								</div>
 								<span className="text-muted-foreground">Type:</span>
 								<span>{method.type}</span>
 							</div>

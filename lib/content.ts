@@ -165,7 +165,7 @@ export const paymentMethods = [
 	{
 		name: "bKash",
 		logo: BkashLogo,
-		number: "017 1784 8532",
+		number: "018 6932 2827 / 017 1784 8532",
 		type: "Personal",
 	},
 	{

@@ -59,7 +59,9 @@ export function RegistrationSection() {
 							<AlertTitle>Important Notice</AlertTitle>
 							<AlertDescription>
 								Registration will be confirmed only after payment verification.
-								The deadline for registration is May 22, 2025.
+								After verification, you will receive a confirmation letter along
+								with your payment receipt. The deadline for registration is May
+								22, 2025.
 							</AlertDescription>
 						</Alert>
 					</div>
