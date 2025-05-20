@@ -7,6 +7,7 @@ import { AnimatedGroup } from "@/components/ui/animated-group";
 import { Trophy, Medal, Target, Users } from "lucide-react";
 import orionLogo from "@/assets/Orion-logo.png";
 import ksrmLogo from "@/assets/ksrm-logo.jpg";
+import MuxPlayer from "@mux/mux-player-react";
 
 const transitionVariants = {
 	item: {
@@ -141,7 +142,7 @@ export default function HeroSection() {
 
 								<Button key={2} asChild size="lg" variant="outline">
 									<Link
-										href="https://ik.imagekit.io/xp2qigjdg/Code%20Of%20Conduct.pdf?updatedAt=1747713669256"
+										href="https://ik.imagekit.io/xp2qigjdg/Code%20Of%20Conduct.pdf?updatedAt=1747714598746"
 										target="_blank"
 									>
 										<span className="text-nowrap">
@@ -153,40 +154,20 @@ export default function HeroSection() {
 						</div>
 					</div>
 
-					{/* <AnimatedGroup
-						variants={{
-							container: {
-								visible: {
-									transition: {
-										staggerChildren: 0.05,
-										delayChildren: 0.75,
-									},
-								},
-							},
-							...transitionVariants,
-						}}
-					>
-						<div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20 pb-20">
-							<div
-								aria-hidden
-								className="bg-linear-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
-							/>
-							<div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl shadow-lg shadow-zinc-950/15 ring-1">
-								<iframe
-									src="https://drive.google.com/file/d/1vVTtG3OuPr9yJU6FkiP0blk0dARMDS4R/preview"
-									width="100%"
-									height="100%"
-									allow="autoplay"
-									allowFullScreen
-									// className="w-full h-full border-none rounded-md"
-								></iframe>
-							</div>
-						</div>
-					</AnimatedGroup> */}
+					<div className="max-w-screen-lg mx-auto mt-12 rounded-2xl overflow-hidden px-6 lg:px-0">
+						<MuxPlayer
+							playbackId="dvy6XKSsfk3pJ7uic3SPrFeXbRdFpmi1OCmdtt4RF78"
+							metadata={{
+								video_id: "jl8EDa2Q3SRuisigqik2DJk1DQ8JDeOU996Yv9DQomI",
+								video_title: "Asterot Football Tournament 2025",
+							}}
+							autoPlay={true}
+						/>
+					</div>
 				</div>
 			</div>
 
-			<div className="bg-background relative z-10 pt-16">
+			<div className="bg-background relative z-10 pt-10 lg:pt-16">
 				<div className="m-auto max-w-5xl px-6">
 					<h2 className="text-center text-lg font-medium">
 						Your favorite companies are our sponsors.
