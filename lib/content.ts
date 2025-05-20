@@ -3,10 +3,10 @@ import NagadLogo from "@/assets/Nagad-Logo.svg";
 import RocketLogo from "@/assets/Rocket-Logo.svg";
 
 export const menuItems = [
-	{ name: "About", href: "#about" },
 	{ name: "Tournament", href: "#tournament" },
 	{ name: "Registration", href: "#registration" },
 	{ name: "Team", href: "#team" },
+	{ name: "Benefits", href: "#benefits" },
 	{ name: "Testimonials", href: "#testimonials" },
 	{ name: "Contact", href: "#contact" },
 ];

@@ -50,7 +50,7 @@ const benefits = [
 
 export default function BenefitSection() {
 	return (
-		<div className="mb-20 xl:mb-40 flex items-center justify-center px-6 2xl:px-0">
+		<section id="benefits" className="mb-20 xl:mb-40 flex items-center justify-center px-6 2xl:px-0">
 			<div className="container max-w-screen-xl mx-auto">
 				<SectionHeading
 					title="Beyond the Game"
@@ -75,6 +75,6 @@ export default function BenefitSection() {
 					))}
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

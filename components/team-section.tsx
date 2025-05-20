@@ -5,7 +5,7 @@ import { SectionHeading } from "./section-heading";
 export default function TeamSection() {
 	return (
 		<section
-			id="#team"
+			id="team"
 			className="flex flex-col items-center justify-center mb-20 2xl:mb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary/5"
 		>
 			<SectionHeading
