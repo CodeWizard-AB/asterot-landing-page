@@ -141,7 +141,7 @@ export default function HeroSection() {
 
 								<Button key={2} asChild size="lg" variant="outline">
 									<Link
-										href="https://ik.imagekit.io/xp2qigjdg/3.%20Code%20of%20Conduct.pdf?updatedAt=1747591004175"
+										href="https://ik.imagekit.io/xp2qigjdg/Code%20Of%20Conduct.pdf?updatedAt=1747713669256"
 										target="_blank"
 									>
 										<span className="text-nowrap">
